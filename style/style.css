@@ -359,6 +359,7 @@ body{
         }
         nav .nav_menu .nav_iteam li{
             margin-top:10px;
+            text-align: center;
         }
         nav .nav_menu .nav_iteam li a span{
            font-size:10px;
@@ -405,14 +406,18 @@ body{
         .banner ul li span{
             margin-right: 10px;
         }
+        nav .toggle .fa-times{
+            display:none;
+        }
         nav .toggle{
           display: initial;
         }
         .nav_menu .nav_iteam{
             display: none;
+            transition: all 0.5s ease-in-out;
         }
         .nav_menu-show{
-            display:flex;
+            display: initial;
         }
     }
 /* =====X==Responsiveness==X===== */
