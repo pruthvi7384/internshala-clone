@@ -1,0 +1,418 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color:#484848;
+    --color1:#FF8C00;
+    --color2:#00A5EC;
+    --color3:#FFFFFF;
+    --heading-color:#333333;
+    --nav-bar-shadow:0 1px 3px 0 rgb(0 0 0 / 15%);
+    --box-shadow:0 4px 16px rgb(0 0 0 / 10%);
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+/* =========Global Classes========= */
+    .d-flex{
+        display:flex;
+    }
+/* ======X==Global Classes==X====== */
+
+/* ==========Navigation Bar========== */
+    nav{
+        width: 100%;
+        padding: 15px;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: var(--nav-bar-shadow);
+    }
+    nav .toggle{
+        position: absolute;
+        top:25px;
+        right:20px;
+        display:none;
+    }
+    nav .toggle .fa-bars{
+        font-size:24px;
+        color:var(--color);
+    }
+    nav .nav_menu .nav_iteam{
+       justify-content: space-evenly;
+       align-items: center;
+    }
+    nav .nav_menu .nav_iteam li{
+        margin:0px 15px;
+    }
+    nav .nav_menu .nav_iteam li a{
+        font-size:14px;
+        font-weight:600;
+        color:var(--color);
+        text-transform: capitalize;
+    }
+    nav .nav_menu .nav_iteam li a span{
+        background-color:var(--color1);
+        padding:3px;
+        color:var(--color3);
+        border-radius: 3px;
+    }
+    nav .nav_menu .nav_iteam li a button {
+        padding: 7px 16px;
+        border-radius: 3px;
+        cursor: pointer;
+        text-transform: capitalize;
+    }
+    nav .nav_menu .nav_iteam li a .btn-login{
+        color:var(--color2);
+        font-weight:600;
+        font-size:14px;
+        background-color:var(--color3);
+        border:1px solid var(--color2);
+    }
+    nav .nav_menu .nav_iteam li a .btn-signup{
+        color:var(--color3);
+        font-weight:600;
+        font-size:14px;
+        background-color:var(--color2);
+        border:1px solid var(--color2);
+    }
+/* =======X==Navigation Bar==X====== */
+
+/* ==========Search========= */
+    .search_bar{
+        margin:24px;
+        justify-content:center;
+        align-items:center;
+    }
+    .search_bar input{
+        width:100%;
+        flex-basis: 40%;
+        padding:15px;
+        border:1px solid #ccc;
+        border-radius:5px 0px 0px 5px;
+        font-size:16px;
+        font-weight: 500;
+        text-transform:capitalize;
+        color:var(--color);
+    }
+    .search_bar input:focus,.search_bar input:hover{
+       outline:none;
+       border:1px solid var(--color2);
+    }
+    .search_bar .fa-search{
+        background-color:var(--color2);
+        padding:15px;
+        font-size:21px;
+        border-radius: 0px 5px 5px 0px;
+        color: var(--color3);
+    }
+/* =======X==Search==X====== */
+
+/* ==========Banner========= */
+    .banner{
+        background-image: url(../assets/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        padding:20px;
+        color: var(--color3);
+        cursor: pointer;
+    }
+    .banner h2{
+        padding-bottom: 5px;
+        font-weight:600;
+        text-transform:capitalize;
+    }
+    .banner h1{
+        display: flex;
+        align-items: center;
+        font-size: 45px;
+        padding-bottom: 5px;
+        font-weight:600;
+        text-transform:capitalize;
+    }
+    .banner h1 span{
+        font-size:22px;
+        margin-left:5px;
+        border-radius: 5px;
+        background-color:var(--color1);
+        padding: 6px;
+    }
+    .banner ul{
+      margin-top:5px;
+    }
+    .banner ul li{
+        display:flex;
+        align-items:center;
+        padding-top:10px;
+        font-size:18px;
+        font-weight:600;
+        text-transform:capitalize;
+    }
+    .banner ul li span{
+        margin-right: 10px;
+    }
+/* ======X==Banner==X======= */
+
+/* ========Internship Section======= */
+    .internship_container{
+        width: 100%;
+        margin-top:20x;
+        padding:15px;
+    }
+    .internship_container .internship_header{
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .internship_container .internship_header .left_headding h2{
+        font-size:28px;
+        color:var(--heading-color);
+        font-weight:600;
+        text-transform:capitalize;
+    }
+    .internship_container .internship_header .left_headding h2 span{
+        font-size:18px;
+        border-radius: 5px;
+        background-color:var(--color1);
+        padding: 6px;
+        color:var(--color3);
+    }
+    .internship_container .internship_header .left_headding p{
+        font-size:18px;
+        color:var(--color);
+        margin-top:16px;
+        font-weight:500;
+        text-transform: capitalize;
+    }
+    .internship_container .internship_header .right_headding a{
+        color:var(--color2);
+        font-size: 16px;
+        font-weight:600;
+        text-transform: capitalize;
+    }
+    .container_row{
+        margin-top:24px;
+    }
+    .container_row .row_headding p{
+        font-size:18px;
+        color:var(--heading-color);
+        font-weight:600;
+        text-transform: capitalize;
+    }
+    .container_row .iteam_row{
+        padding:20px;
+        overflow-x:scroll;
+        scroll-behavior: smooth;
+    }
+    .container_row .iteam_row::-webkit-scrollbar{
+        display:none;
+    }
+    .container_row .iteam_row .iteam_body{
+        width:170px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor:pointer;
+        padding:20px 10px;
+        transition: all 0.5s ease-in-out;
+    }
+    .container_row .iteam_row .iteam_body:hover{
+        box-shadow:var(--box-shadow);
+        border-radius: 5px;
+    }
+    .container_row .iteam_row .iteam_body p{
+        font-size:16px;
+        color:var(--heading-color);
+        text-transform:capitalize;
+        font-weight:600;
+        margin-top:16px;
+        text-align:center;
+    }
+/* ======X==Internship Section==X===== */
+
+/* ========Tranning section======= */
+    .container_row .iteam_row_traning{
+        padding:20px;
+        justify-content:space-evenly;
+        flex-wrap:wrap;
+    }
+    .container_row .iteam_row_traning .iteam_body{
+        width:140px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor:pointer;
+        padding:20px 10px;
+        transition: all 0.5s ease-in-out;
+    }
+    .container_row .iteam_row_traning .iteam_body:hover{
+        box-shadow:var(--box-shadow);
+        border-radius: 5px;
+    }
+    .container_row .iteam_row_traning .iteam_body p{
+        font-size:16px;
+        color:var(--heading-color);
+        text-transform:capitalize;
+        font-weight:600;
+        margin-top:16px;
+        text-align:center;
+    }
+
+/* ========Tranning section======= */
+
+/* =========Footer Section======== */
+    .footer{
+        width:100%;
+        background-color:var(--heading-color);
+        padding:15px;
+        color:var(--color3);
+    }
+    .footer .row_footer {
+        border-bottom:1px solid var(--color3);
+    }
+    .footer .row_footer .col-3{
+        flex-basis: 25%;
+        padding:20px;
+    }
+    .footer .row_footer .col-3 h2{
+        margin:10px 0px;
+        font-size:18px;
+        font-weight:600;
+    }
+    .footer .row_footer .col-3 h2 span{
+        font-size:16px;
+        background-color:var(--color1);
+        padding:3px;
+        color:var(--color3);
+        border-radius: 3px;
+    }
+    .footer .row_footer .col-3 ul li{
+        margin:10px 0px;
+    }
+    .footer .row_footer .col-3 ul li a{
+        color:var(--color3);
+        font-size: 14px;;
+        text-transform:capitalize;
+    }
+    .footer .developer{
+        padding-top:15px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer .developer .app_info{
+        align-items:center;
+    }
+    .footer .developer .app_info button{
+        padding:10px;
+        background-color:transparent;
+        border:1px solid var(--color3);
+        color: var(--color3);
+        border-radius:5px;
+        text-transform:capitalize;
+        font-size:16px;
+        font-weight: 500;
+    }
+    .footer .developer .app_info ul li a .fab{
+        margin:0px 10px;
+        color:var(--color3);
+        font-size: 18px;
+    }
+    .footer .developer .developer_info p{
+        color: var(--color3);
+        font-size:14px;
+        font-weight:600;
+    }
+    .footer .developer .developer_info p span a{
+        color: var(--color1);
+        font-size:16px;
+    }
+/* ======X==Footer Section==X===== */
+
+/* =======Responsiveness======= */
+    @media(max-width:900px){
+        nav{
+           flex-direction:column;
+           justify-content:center;
+        }
+        .footer .row_footer .col-3 h2 span{
+            font-size:10px;
+        }
+        nav .nav_menu{
+            margin-top:10px;
+        }
+    }
+    @media(max-width:500px){
+        nav .nav_menu .nav_iteam{
+            flex-direction: column;
+        }
+        nav .nav_menu .nav_iteam li{
+            margin-top:10px;
+        }
+        nav .nav_menu .nav_iteam li a span{
+           font-size:10px;
+            border-radius: 3px;
+        }
+        .search_bar input{
+            flex-basis: 75%;
+        }
+        .footer .row_footer{
+            flex-direction: column;
+        }
+        .footer .developer{
+            flex-direction: column;
+        }
+        .footer .developer .developer_info p{
+            margin-top:10px;
+        }
+        .internship_container .internship_header{
+            justify-content: center;
+        }
+        .internship_container .internship_header .left_headding h2{
+          text-align: center;
+        }
+        .internship_container .internship_header .left_headding h2 span{
+            font-size:10px;
+        }
+        .internship_container .internship_header .left_headding p{
+            font-size:16px;
+            text-align: center;
+        }
+        .banner h2{
+           font-size:22px;
+        }
+        .banner h1{
+           font-size:35px;
+        }
+        .banner h1 span{
+            font-size:18px;
+            margin-left:2px;
+        }
+        .banner ul li{
+            font-size:16px;
+        }
+        .banner ul li span{
+            margin-right: 10px;
+        }
+        nav .toggle{
+          display: initial;
+        }
+        .nav_menu .nav_iteam{
+            display: none;
+        }
+        .nav_menu-show{
+            display:flex;
+        }
+    }
+/* =====X==Responsiveness==X===== */
