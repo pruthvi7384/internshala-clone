@@ -419,5 +419,8 @@ body{
         .nav_menu-show{
             display: initial;
         }
+        .footer .developer .app_info button{
+            font-size:13px;
+        }
     }
 /* =====X==Responsiveness==X===== */
